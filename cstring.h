@@ -1,23 +1,20 @@
-#ifndef __CSTRING_H__
-#define __CSTRING_H__
+#ifndef __STR2INT_H__
+#define __STR2INT_H__
 #include <iostream>
-#include <sstream>
-#include <string>
 using namespace std;
-long long main1(){
+int s2i(){
 char a[501];
-long long cnt_int=0;
-//cnt_int ÓÃÓÚ´æ·Å×Ö·û´®ÖÐµÄÊý×Ö.
+int cnt_int=0; //cnt_int ç”¨äºŽå­˜æ”¾å­—ç¬¦ä¸²ä¸­çš„æ•°å­—.
 cin.getline(a,501);
-for(int i=0;a[i]!='\0';++i) //µ±aÊý×éÔªËØ²»Îª½áÊø·ûÊ±.±éÀú×Ö·û´®a.
+for(int i=0;a[i]!='\0';++i) //å½“aæ•°ç»„å…ƒç´ ä¸ä¸ºç»“æŸç¬¦æ—¶.éåŽ†å­—ç¬¦ä¸²a.
 {
-if(a[i]>='0'&& a[i]<='9') //Èç¹ûÊÇÊý×Ö.
+if(a[i]>='0'&& a[i]<='9') //å¦‚æžœæ˜¯æ•°å­—.
 {
 cnt_int*=10;
-cnt_int+=a[i]-'0'; //Êý×Ö×Ö·ûµÄascii-×Ö·û'0'µÄasciiÂë¾ÍµÈÓÚ¸ÃÊý×Ö.
+cnt_int+=a[i]-'0'; //æ•°å­—å­—ç¬¦çš„ascii-å­—ç¬¦'0'çš„asciiç å°±ç­‰äºŽè¯¥æ•°å­—.
 }
 }
-long long k = cnt_int; //Êä³öÊý×Ö.
+int k = cnt_int; //è¾“å‡ºæ•°å­—.
 return k;
 }
 #endif
